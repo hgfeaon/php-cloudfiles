@@ -2402,7 +2402,7 @@ class CF_Object
 
         clearstatcache();
         
-        $size = (float) sprintf("%u", filesize($filename));
+        $size = (float) sprintf("%f", filesize($filename));
         if ($size > MAX_OBJECT_SIZE) {
             throw new SyntaxException("File size exceeds maximum object size.");
         }
